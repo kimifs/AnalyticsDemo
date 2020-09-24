@@ -1,0 +1,46 @@
+<aura:component implements="lightning:homeTemplate" description="">
+    
+    <!-- Images (Static) -->
+    <aura:attribute name="head" type="Aura.Component[]" />
+    <aura:attribute name="foot" type="Aura.Component[]" />
+
+    <!-- Analytics Dashboard -->
+    <aura:attribute name="dashboard" type="Aura.Component[]" />
+
+    <!-- Task List, FAQ, Learning Map, Trailhead Link -->
+    <aura:attribute name="left_col" type="Aura.Component[]" />
+    <aura:attribute name="center_col" type="Aura.Component[]" />
+    
+    <!-- Countdown, Purchase Form  -->
+    <aura:attribute name="right_col" type="Aura.Component[]" />
+
+    <div>
+        <lightning:layout>
+            <lightning:layoutItem size="12" class="custom_spacing">
+                {!v.head}
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="{! $Browser.isDesktop ? '8' : '12' }" class="custom_spacing">
+                {!v.dashboard}
+                <lightning:layout>
+                    <lightning:layoutItem size="{! $Browser.isDesktop ? '6' : '12' }" class="custom_spacing_top custom_spacing_right">
+                        {!v.center_col}
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="{! $Browser.isDesktop ? '6' : '12' }" class="custom_spacing_top custom_spacing_left">
+                        {!v.left_col}
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="{! $Browser.isDesktop ? '4' : '12' }" class="custom_spacing">
+                {!v.right_col}
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="12" class="custom_spacing">
+                {!v.foot}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+</aura:component>

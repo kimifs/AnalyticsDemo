@@ -1,0 +1,8 @@
+.THIS.toggle {
+    display: none;
+}
+
+.THIS .remove-margins {
+    margin-bottom: 0px;
+    margin-right: -10px;
+}

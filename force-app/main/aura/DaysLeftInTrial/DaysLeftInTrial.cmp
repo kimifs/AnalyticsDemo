@@ -1,0 +1,14 @@
+<aura:component controller="DaysLeftInTrialController" implements="flexipage:availableForAllPageTypes" access="global">
+	
+    <aura:handler name="init" value="{!this}" action="{!c.getDaysLeftInTrial}" />
+    <aura:attribute name="daysLeft" type="Integer"/>
+    
+    <strong>Your trial will expire in {!v.daysLeft} 
+        <aura:if isTrue="{!v.daysLeft == 1}"> day!
+            <aura:set attribute="else">
+                days!
+            </aura:set>
+        </aura:if>
+    </strong>
+    
+</aura:component>

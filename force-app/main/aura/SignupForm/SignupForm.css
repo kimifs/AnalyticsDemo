@@ -1,0 +1,17 @@
+.THIS .custom-width {
+    width: 100%;
+}
+
+.THIS .toggle {
+    display: none;
+}
+
+.THIS .placeholder-image {
+    min-height: 800px;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.THIS {
+    margin-bottom: 1rem;
+}

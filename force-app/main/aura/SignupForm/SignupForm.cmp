@@ -1,0 +1,105 @@
+<aura:component controller="SignupFormController" implements="flexipage:availableForAllPageTypes" access="global">
+    <ltng:require scripts="{!$Resource.jQueryJS}" />
+    
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:attribute name="controllerData" type="SignupFormController"/>
+    <aura:attribute name="endpointURL" type="String"/>
+    
+    <div class="slds-box non-title slds-theme--default">
+        
+        <lightning:layout>
+            
+            <lightning:layoutItem padding="around-small">
+
+                <div class="days-left-message slds-p-vertical_medium slds-text-heading_small">
+                	<c:DaysLeftInTrial />
+                </div>
+                
+                <div class="signup-form-message buy-message slds-align_absolute-center slds-p-top_medium slds-p-bottom_large slds-text-heading_small">
+                    Ready to buy? Fill out this form and a member of our team will contact you to complete your transaction.
+                </div>
+                
+                <div class="signup-form slds-align_absolute-center" aria-labelledby="signupform">
+                    
+                    <form id="signupForm" aura:id="signupForm" class="slds-form--stacked custom-width" action="{!v.controllerData.formSettings.Endpoint_URL__c}">          
+                        <lightning:input aura:id="formFirstName" 
+                                         type="text"
+                                         label="First Name"
+                                         name="UserFirstName"
+                                         value="{!v.controllerData.relatedUser.FirstName}"
+                                         required="true" />
+                        <lightning:input aura:id="formLastName" 
+                                         type="text"
+                                         label="Last Name"
+                                         name="UserLastName"
+                                         value="{!v.controllerData.relatedUser.LastName}"
+                                         required="true" />
+                        <lightning:input aura:id="formEmail" 
+                                         type="email"
+                                         label="Email Address"
+                                         name="UserEmail"
+                                         value="{!v.controllerData.relatedUser.Email}"
+                                         required="true" />
+                        <lightning:input aura:id="formPhone" 
+                                         type="tel"
+                                         label="Telephone Number"
+                                         name="UserPhone"
+                                         value="{!v.controllerData.relatedUser.Phone}"
+                                         required="true" />
+                        <lightning:input aura:id="formTitle" 
+                                         type="text"
+                                         label="Title"
+                                         name="UserTitle"
+                                         value="{!v.controllerData.relatedUser.UserRole.Name}"
+                                         required="true" />
+                        <lightning:input aura:id="formCompany" 
+                                         type="text"
+                                         label="Company"
+                                         name="CompanyName"
+                                         value="{!v.controllerData.relatedUser.CompanyName}"
+                                         required="true" />
+                        
+                        <lightning:select aura:id="formEmployees" name="CompanyEmployees" label="Number of Employees" required="true">
+                            <option value="3">1 - 5 employees</option>
+                            <option value="12">6 - 20 employees</option>
+                            <option value="50">21 - 100 employees</option>
+                            <option value="250">101 - 500 employees</option>
+                            <option value="2000">501 - 3,500 employees</option>
+                            <option value="3500">3,501+ employees</option>
+                        </lightning:select>
+                       
+                        <c:CountryPicklist />
+
+                        <!-- BEGIN HIDDEN FIELDS -->
+                        
+                        <input type="hidden" name="DriverCampaignId" value="{!v.controllerData.formSettings.Campaign_ID__c}" />                                                 
+                        <input type="hidden" name="FormCampaignId" value="{!v.controllerData.formSettings.Form_Campaign_ID__c}" />                                                 
+                        <input type="hidden" name="mcloudFormName" value="{!v.controllerData.formSettings.Marketing_Cloud_Form_Name__c}" /> 
+                        
+                        <input type="hidden" name="LeadSource" value="{!v.controllerData.formSettings.Lead_Source__c}" />                                                 
+                        <input type="hidden" name="Lead.Primary_Product_Interest__c" value="{!v.controllerData.formSettings.Product_Interest__c}" /> 
+
+                        <input type="hidden" name="resultHost" value="{!v.controllerData.formSettings.Request_Host__c}" /> 
+                        <input type="hidden" name="requestPage" value="{!v.controllerData.formSettings.Request_Page__c}" /> 
+                        <input type="hidden" name="resultPage" value="{!v.controllerData.formSettings.Result_Page__c}" /> 
+                        
+                        <!-- END HIDDEN FIELDS -->
+                        
+                        <lightning:button label="Submit"
+                                          class="slds-align_absolute-center slds-m-top--x-large"
+                                          variant="brand"
+                                          onclick="{!c.submitForm}"
+                                          />
+                        
+                    </form>
+                    
+                </div>       
+                
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+    </div>
+    
+</aura:component>

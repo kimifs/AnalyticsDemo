@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Signup Form Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Signup Form Success</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campaign ID --></label>
+        <name>Campaign_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Submitted --></label>
+        <name>Date_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Endpoint URL --></label>
+        <name>Endpoint_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Campaign ID --></label>
+        <name>Form_Campaign_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Submitted --></label>
+        <name>Is_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadInfoEmail --></label>
+        <name>LeadInfoEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>Lead_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Cloud Form Name --></label>
+        <name>Marketing_Cloud_Form_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Interest --></label>
+        <name>Product_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Host --></label>
+        <name>Request_Host__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Page --></label>
+        <name>Request_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Page --></label>
+        <name>Result_Page__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

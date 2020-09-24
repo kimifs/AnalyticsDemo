@@ -1,0 +1,7 @@
+<design:component>
+
+    <design:attribute name="description" label="Component Text" />
+    <design:attribute name="button_title" label="Button Text" />
+    <design:attribute name="button_link" label="Target URL" />
+    
+</design:component>

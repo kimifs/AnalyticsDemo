@@ -1,0 +1,101 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+                access="global" controller="ContractSearchController">
+    <aura:attribute name="searchInput" type="String"/>
+    <div class="slds-p-around_small">
+        <lightning:input aura:id="search" name="search" label="Search For Contracts"
+                         placeholder="Enter Tenant Name or Building Name to search for Contracts" value="{!v.searchInput}"/>
+        
+        <lightning:select aura:id="select" value ="select" name="selectSearchBy" label="Search by.." required="true" >
+            <option value="">Choose one...</option>
+            <option value="Tenant">Tenant</option>
+            <option value="Building">Building</option>
+        </lightning:select>
+        <br/>
+        <lightning:button name="searchButton" label="Go" onclick="{!c.handleSearchClick}"/> 
+    </div>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <!--create a component attributs -->
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <!--   <aura:attribute name="ListOfContact" type="contact[]" /> -->
+    
+    <!--loading spinner start... style=Brand Medium (blue dots)-->
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    
+    <aura:attribute name="contractsResult" type="List" />
+    <aura:attribute name="catchEmptyResult" type="String" />
+    <p>{!v.catchEmptyResult}</p>
+    
+    <p>
+        <ul>   
+            <aura:iteration items="{!v.contractsResult}" var="con">
+                <li><div class="slds-p-horizontal_medium"><lightning:card>
+                    <div class="slds-p-horizontal_x-small">
+                        <lightning:tile >
+                            <div class="slds-float_left">
+                                <div class="slds-p-right_medium">
+                                <lightning:icon iconName="custom:custom18" />
+                                </div></div>
+                            
+                            <dl class="slds-dl_horizontal">
+                                <dt class="slds-dl_horizontal__label">
+                                    <p class="slds-truncate" title="contractNumber">Lease Contract Number:</p>
+                                </dt>
+                                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                    <p class="slds-truncate" title="contractNumber">{!con.Name}</p>
+                                </dd>
+                                <dt class="slds-dl_horizontal__label">
+                                    <p class="slds-truncate" title="status">Status:</p>
+                                </dt>
+                                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                    <p class="slds-truncate" title="status">{!con.Status__c}</p>
+                                </dd>
+                                <dt class="slds-dl_horizontal__label">
+                                    <p class="slds-truncate" title="TenantName">Tenant Name:</p>
+                                </dt>
+                                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                    <p class="slds-truncate" title="TenantName">{!con.Tenant_Contact__r.Name}</p>
+                                </dd>   
+                                
+                                <dt class="slds-dl_horizontal__label">
+                                    <p class="slds-truncate" title="Flat">Flat:</p>
+                                </dt>
+                                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                    <p class="slds-truncate" title="Flat">{!con.Flat__r.Name}</p>
+                                </dd>  
+                                <dt class="slds-dl_horizontal__label">
+                                    <p class="slds-truncate" title="Building">Building Name:</p>
+                                </dt>
+                                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                    <p class="slds-truncate" title="Building">{!con.Building__r.Name}</p>
+                                </dd>      
+                                <dt class="slds-dl_horizontal__label">
+                                    <p class="slds-truncate" title="RemainingDays">Days Remaining In Contract:</p>
+                                </dt>
+                                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                    <p class="slds-truncate" title="RemainingDays">{!con.Days_Remaining_In_Contract__c}</p>
+                                </dd>  
+                                
+                            </dl>
+                            
+                        </lightning:tile>
+                    </div>
+                    </lightning:card>
+                    </div>
+                </li> <br/>
+                
+            </aura:iteration>
+        </ul>
+        
+    </p>
+    <lightning:button onclick="{!c.print}">Print</lightning:button>
+</aura:component>

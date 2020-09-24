@@ -1,0 +1,252 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" controller ="LeaseContractPathComponentController" >
+    <!--  <ltng:require styles="{!$Resource.SLDS + '/assets/styles/salesforce-lightning-design-system.css'}"/>   -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="currentStage" type="String" />
+    
+    <aura:if isTrue="{!v.currentStage == 'Approved'}">
+        <lightning:card><div class="slds-p-horizontal_medium"> <div class="slds-path">
+            <div class="slds-grid slds-path__track">
+                <div class="slds-grid slds-path__scroller-container">
+                    <div class="slds-path__scroller" role="application">
+                        <div class="slds-path__scroller_inner">
+                            <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                <li class="slds-path__item slds-is-complete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-33" role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            
+                                            <span class="slds-assistive-text">Stage Complete</span>
+                                            <span class="slds-path__stage">
+                                                <span>✓</span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-path__title">Submitted For Approval</span>
+                                    </a>
+                                </li>
+                                <li class="slds-path__item slds-is-complete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-34" role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            
+                                            <span class="slds-assistive-text">Stage Complete</span>
+                                            <span class="slds-path__stage">
+                                                <span>✓</span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-path__title">Approval by Coordinator's Manager</span>
+                                    </a>
+                                </li>
+                                <li class="slds-path__item slds-is-won slds-is-active slds-is-current" role="presentation">
+                                    <a aria-selected="true" class="slds-path__link" href="javascript:void(0);" id="path-35" role="option" tabindex="0">
+                                        <span class="slds-path__stage">
+                                            
+                                            <span class="slds-assistive-text">Current Stage:</span>
+                                        </span>
+                                        <span class="slds-path__title">Approved</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </lightning:card>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.currentStage == 'Rejected by Coordinator\'s Manager'}">
+        <lightning:card><div class="slds-p-horizontal_medium"> 
+            <div class="slds-path">
+                <div class="slds-grid slds-path__track">
+                    <div class="slds-grid slds-path__scroller-container">
+                        <div class="slds-path__scroller" role="application">
+                            <div class="slds-path__scroller_inner">
+                                <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                    <li class="slds-path__item slds-is-complete" role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-33" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                
+                                                <span class="slds-assistive-text">Stage Complete</span>
+                                                <span class="slds-path__stage">
+                                                    <span>✓</span>
+                                                </span>
+                                            </span>
+                                            <span class="slds-path__title">Submitted For Approval</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-path__item slds-is-lost slds-is-active slds-is-current" role="presentation">
+                                        <a aria-selected="true" class="slds-path__link" href="javascript:void(0);" id="path-40" role="option" tabindex="0">
+                                            <span class="slds-path__stage">
+                                                
+                                                <span class="slds-assistive-text">Current Stage:</span>
+                                            </span>
+                                            <span class="slds-path__title">Rejected</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-54" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                
+                                            </span>
+                                            <span class="slds-path__title">Final Approval By Management</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </lightning:card>
+    </aura:if>
+    <aura:if isTrue="{!v.currentStage == 'Rejected'}">
+        <lightning:card><div class="slds-p-horizontal_medium"> 
+            <div class="slds-path">
+                <div class="slds-grid slds-path__track">
+                    <div class="slds-grid slds-path__scroller-container">
+                        <div class="slds-path__scroller" role="application">
+                            <div class="slds-path__scroller_inner">
+                                <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                    <li class="slds-path__item slds-is-complete" role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                
+                                                <span class="slds-assistive-text">Stage Complete</span>
+                                                <span class="slds-path__stage">
+                                                    <span>✓</span>
+                                                </span>
+                                            </span>
+                                            <span class="slds-path__title">Submitted For Approval</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-path__item slds-is-complete" role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-7" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                
+                                                <span class="slds-assistive-text">Stage Complete</span>
+                                                <span class="slds-path__stage">
+                                                    <span>✓</span>
+                                                </span>
+                                            </span>
+                                            <span class="slds-path__title">Approved by Coordinator's Manager</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-path__item slds-is-lost slds-is-active slds-is-current" role="presentation">
+                                        <a aria-selected="true" class="slds-path__link" href="javascript:void(0);" id="path-40" role="option" tabindex="0">
+                                            <span class="slds-path__stage">
+                                                
+                                                <span class="slds-assistive-text">Current Stage:</span>
+                                            </span>
+                                            <span class="slds-path__title">Rejected </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </lightning:card>
+    </aura:if>
+    <aura:if isTrue="{!v.currentStage == 'Submitted for Approval'}">
+        <lightning:card> <div class="slds-p-horizontal_medium">
+            <div class="slds-path">
+                <div class="slds-grid slds-path__track">
+                    <div class="slds-grid slds-path__scroller-container">
+                        <div class="slds-path__scroller" role="application">
+                            <div class="slds-path__scroller_inner">
+                                <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                    <li class="slds-path__item slds-is-current slds-is-active" role="presentation">
+                                        <a aria-selected="true" class="slds-path__link" href="javascript:void(0);" id="path-1" role="option" tabindex="0">
+                                            <span class="slds-path__stage">
+                                                
+                                                <span class="slds-assistive-text">Current Stage:</span>
+                                            </span>
+                                            <span class="slds-path__title">Submitted for Approval</span>
+                                        </a>
+                                    </li>
+                                    <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-2" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                
+                                            </span>
+                                            <span class="slds-path__title">Approval by Coordinator's Manager</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-5" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                
+                                            </span>
+                                            <span class="slds-path__title">Final Approval</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </lightning:card> 
+    </aura:if>
+    <aura:if isTrue="{!v.currentStage == 'Approved by Coordinator\'s Manager'}">
+        <lightning:card> <div class="slds-p-horizontal_medium"> <div class="slds-path">
+            <div class="slds-grid slds-path__track">
+                <div class="slds-grid slds-path__scroller-container">
+                    <div class="slds-path__scroller" role="application">
+                        <div class="slds-path__scroller_inner">
+                            <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                <li class="slds-path__item slds-is-complete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            
+                                            <span class="slds-assistive-text">Stage Complete</span>
+                                            <span class="slds-path__stage">
+                                                <span>✓</span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-path__title">Submitted for Approval</span>
+                                    </a>
+                                </li>
+                                <li class="slds-path__item slds-is-complete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-7" role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            
+                                            <span class="slds-assistive-text">Stage Complete</span>
+                                            <span class="slds-path__stage">
+                                                <span>✓</span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-path__title">Approval by Coordinator's Manager</span>
+                                    </a>
+                                </li>
+                                
+                                
+                                <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-10" role="option" tabindex="-1">
+                                        <span class="slds-path__stage">
+                                            
+                                        </span>
+                                        <span class="slds-path__title">Final Approval</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+            </div>
+        </lightning:card> 
+    </aura:if>
+    
+</aura:component>

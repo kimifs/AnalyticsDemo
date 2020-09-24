@@ -1,0 +1,36 @@
+.THIS .custom_spacing {
+    padding: 0.5rem;
+}
+
+.THIS .custom_spacing_top {
+    padding-top: 1rem;
+}
+
+.THIS .custom_spacing_left {
+    padding-left: 0.5rem;
+}
+
+.THIS .custom_spacing_right {
+    padding-right: 0.5rem;
+}
+
+.THIS .flexipageComponent {
+    margin-bottom: 0px !important;
+}
+
+.THIS .slds-box.non-title {
+    border-radius: 0px;
+    border: none !important;
+}
+
+.THIS .slds-box.custom_title {
+    border-radius: 0 0 0 0;
+}
+
+.THIS .custom-image {
+    border-radius: 0 0 0 0;
+}
+
+.THIS.slds-box.content-box {
+    margin-bottom: 1rem;
+}

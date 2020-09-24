@@ -1,0 +1,52 @@
+<aura:component controller="MyCustomTaskController" implements="flexipage:availableForAllPageTypes" access="global">
+	
+    <aura:handler name="init" value="{!this}" action="{!c.getTaskList}" />
+    <aura:attribute name="taskList" type="List"/>
+    
+    <div class="slds-box non-title slds-theme--default">
+        
+        <lightning:layout>
+        	<lightning:layoutItem aura:id="taskList" padding="around-small">
+               
+                <div class="signup-form-message slds-align_absolute-center slds-p-horizontal_large slds-p-bottom_x-large slds-text-heading_small">
+                    Check the tasks below as you complete them to track your trial progress!
+                </div>
+               
+            	<aura:iteration items="{!v.taskList}" var="t" indexVar="index">
+                    
+                        <div class="tile-container" 
+                             data-row-index="{!index}"
+                             data-task-id="{!t.Id}"
+                             data-is-checked="{!t.Is_Completed__c}"
+                             data-action-url="{!t.Actionable_Link__c}"
+                             onclick="{!c.taskClick}">
+                            <lightning:tile label="{!t.Task_Title__c}" class="{!t.crossOut}">
+                                <aura:set attribute="media">
+                                    <lightning:icon size="xx-small" iconName="{!t.iconName}"/>
+                                </aura:set>
+                                <dl class="slds-dl_horizontal">
+                                    <aura:if isTrue="{!t.Is_Completed__c}">
+                                        <dt class="slds-dl_horizontal__text">
+                                            <p class="date-text slds-text-body_small">
+                                                Completed! Yay!
+                                            </p>
+                                        </dt>
+                                        <aura:set attribute="else">
+                                            <dt class="slds-dl_horizontal__text">
+                                                <p>{!t.Subtitle__c}</p>
+                                            </dt>
+                                        </aura:set>
+                                    </aura:if>
+                                </dl>
+                            </lightning:tile>
+                        </div>
+
+                </aura:iteration>
+            </lightning:layoutItem>
+        </lightning:layout>
+
+        
+        
+    </div>
+    
+</aura:component>

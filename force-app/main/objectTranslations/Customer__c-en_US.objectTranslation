@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Churn --></label>
+        <name>Churn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <picklistValues>
+            <masterLabel>Month-to-Month</masterLabel>
+            <translation><!-- Month-to-Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One Year</masterLabel>
+            <translation><!-- One Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Two Year</masterLabel>
+            <translation><!-- Two Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Identifier --></label>
+        <name>Customer_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependents --></label>
+        <name>Dependents__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Protection --></label>
+        <name>Device_Protection__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Internet Service --></label>
+        <name>Internet_Service__c</name>
+        <picklistValues>
+            <masterLabel>DSL</masterLabel>
+            <translation><!-- DSL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fiber Optic</masterLabel>
+            <translation><!-- Fiber Optic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Multiple Lines --></label>
+        <name>Multiple_Lines__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Phone Service</masterLabel>
+            <translation><!-- No Phone Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Online Backup --></label>
+        <name>Online_Backup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online Security --></label>
+        <name>Online_Security__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paperless Billing --></label>
+        <name>Paperless_Billing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner --></label>
+        <name>Partner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>Payment_Method__c</name>
+        <picklistValues>
+            <masterLabel>Bank Transfer (Automatic)</masterLabel>
+            <translation><!-- Bank Transfer (Automatic) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Card (Automatic)</masterLabel>
+            <translation><!-- Credit Card (Automatic) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronic Check</masterLabel>
+            <translation><!-- Electronic Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailed Check</masterLabel>
+            <translation><!-- Mailed Check --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone Service --></label>
+        <name>Phone_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- Senior Citizen --></label>
+        <name>Senior_Citizen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Streaming Movies --></label>
+        <name>Streaming_Movies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Streaming TV --></label>
+        <name>Streaming_TV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tech Support --></label>
+        <name>Tech_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tenure --></label>
+        <name>Tenure__c</name>
+    </fields>
+    <layouts>
+        <layout>Customer Layout</layout>
+        <sections>
+            <label><!-- Service Information --></label>
+            <section>Service Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,5 @@
+<design:component>
+
+    <design:attribute name="image_resource_name" label="Developer Name of Static Resource" />
+    
+</design:component>

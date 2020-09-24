@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="description" type="String" />
+    <aura:attribute name="button_title" type="String" />
+    <aura:attribute name="button_link" type="String" />
+    
+    <div class="slds-box non-title content-box slds-theme--default slds-p-around_small">
+	
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12" class="slds-p-horizontal_small slds-p-top_small">
+            	<p class="slds-text-heading_small">{!v.description}</p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" class="slds-p-horizontal_small slds-p-bottom_small" >
+                <a href="{!v.button_link}" target="_blank">
+                    <lightning:button 
+						label="{!v.button_title}"
+						class="slds-align_absolute-center slds-m-top--x-large"
+						variant="brand"
+					/>
+                </a>
+            </lightning:layoutItem>
+        </lightning:layout>
+
+    </div>
+    
+</aura:component>

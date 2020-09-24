@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Yes</fullName>
+        <default>false</default>
+        <label>Yes</label>
+    </customValue>
+    <customValue>
+        <fullName>No</fullName>
+        <default>false</default>
+        <label>No</label>
+    </customValue>
+    <customValue>
+        <fullName>No internet service</fullName>
+        <default>false</default>
+        <label>No internet service</label>
+    </customValue>
+    <description>Yes/No/No Internet Service</description>
+    <masterLabel>Internet Service Customer</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

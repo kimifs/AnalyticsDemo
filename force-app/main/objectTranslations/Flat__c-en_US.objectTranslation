@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Flat</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Flats</value>
+    </caseValues>
+    <fields>
+        <help><!-- This field stores the number of bathrooms in the flat. --></help>
+        <label><!-- Bathrooms --></label>
+        <name>Bathrooms__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field stores the building of the flat. --></help>
+        <label><!-- Building --></label>
+        <name>Building__c</name>
+        <relationshipLabel><!-- Flats --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field stores the floor number of the flat. --></help>
+        <label><!-- Floor --></label>
+        <name>Floor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Furnishing --></label>
+        <name>Furnishing__c</name>
+        <picklistValues>
+            <masterLabel>Fully Furnished</masterLabel>
+            <translation><!-- Fully Furnished --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not furnished</masterLabel>
+            <translation><!-- Not furnished --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semi-furnished</masterLabel>
+            <translation><!-- Semi-furnished --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has Balcony --></label>
+        <name>Has_Balcony__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Rooms --></label>
+        <name>Number_of_Rooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Occupied</masterLabel>
+            <translation><!-- Occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacant</masterLabel>
+            <translation><!-- Vacant --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Flat Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Balcony not available on floor 1 --></errorMessage>
+        <name>Balcony_should_not_be_on_floor_1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Floor Number --></errorMessage>
+        <name>Invalid_Floor_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Can&apos;t Add Flat to the building as Maximum Limit of Flats in the building is reached. --></errorMessage>
+        <name>Valid_Max_No_Of_Flats</name>
+    </validationRules>
+</CustomObjectTranslation>

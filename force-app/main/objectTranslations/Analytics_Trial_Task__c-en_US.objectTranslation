@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Analytics Trial Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Analytics Trial Task</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actionable Link --></label>
+        <name>Actionable_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is_Completed --></label>
+        <name>Is_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtitle --></label>
+        <name>Subtitle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Order --></label>
+        <name>Task_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Title --></label>
+        <name>Task_Title__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

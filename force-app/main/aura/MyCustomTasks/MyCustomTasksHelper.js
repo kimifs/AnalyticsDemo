@@ -1,0 +1,4 @@
+({
+	doSomething : function(component, event) {        
+	}
+})

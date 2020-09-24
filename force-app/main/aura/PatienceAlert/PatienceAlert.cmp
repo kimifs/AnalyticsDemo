@@ -1,0 +1,21 @@
+<aura:component controller="PatienceAlertController" implements="flexipage:availableForAllPageTypes" access="global">
+	
+    <aura:handler name="init" value="{!this}" action="{!c.getHide}" />
+    <aura:attribute name="hideMessage" type="Boolean"/>
+    
+    <aura:if isTrue="{!v.hideMessage}">
+        <div class="slds-box slds-theme--default slds-p-horizontal_large slds-p-bottom_large">
+            <lightning:layout >
+                <lightning:layoutItem padding="around-small">
+                    <lightning:icon iconName="action:defer" />
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="around-small">
+                    Hang on tight! Your org was recently created and we are running your dataflows now. 
+                    If it has not already, the data in the above dashboard will appear momentarily.
+                    You can also refresh this page to load the remaining widgets.
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div>
+    </aura:if>
+    
+</aura:component>

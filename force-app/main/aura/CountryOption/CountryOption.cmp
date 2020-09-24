@@ -1,0 +1,14 @@
+<aura:component >
+    
+    <aura:handler event="c:ask" action="{!c.fireEvent}" />
+    
+    <aura:registerEvent name="push" type="c:optionSelectEvent" />
+    
+    <aura:attribute name="value" type="String" access="global"/> 
+    <aura:attribute name="label" type="String" access="global"/> 
+    <aura:attribute name="opt_in" type="Boolean" access="global"/>
+    <aura:attribute name="is_selected" type="Boolean" access="global"/>
+
+    <option data-opt-in="{!v.opt_in}" selected="{!v.is_selected}" value="{!v.value}">{!v.label}</option>
+    
+</aura:component>

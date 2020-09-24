@@ -1,0 +1,35 @@
+<aura:component controller="CountryPicklistController" implements="flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.initializePicklists}" />
+    
+    <aura:attribute name="countryList" type="List"/>
+    <aura:attribute name="stateList" type="List"/>
+    <aura:attribute name="showOptIn" type="Boolean"/>
+    
+    
+    <lightning:select aura:id="formCountry" name="CompanyCountry" label="Country" required="true" onchange="{!c.countryUpdated}" value="US">
+        <aura:iteration items="{!v.countryList}" var="country">
+            <option aura:id="{!country.ISO_Code__c}" data-opt-in="{!country.Email_Opt_In__c}" selected="{!country.isSelected}" value="{!country.ISO_Code__c}">{!country.Name}</option>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select aura:id="formCountryState" name="CompanyState" label="State" class="toggle" >
+		<option selected="true" value="">Select a State...</option>
+        <aura:iteration items="{!v.stateList}" var="state">
+            <option value="{!state.USPS_Code__c}">{!state.Name}</option>
+        </aura:iteration>
+    </lightning:select>
+    
+    <aura:if isTrue="{!v.showOptIn}">
+        <div aura:id="formInfoEmailContainer" class="slds-checkbox">
+            <label class="slds-checkbox__label" for="formInfoEmail">
+                <span class="slds-checkbox">
+                    <lightning:input type="checkbox" name="Lead.InfoEmail__c" aura:id="formInfoEmail" class="remove-margins" />
+                </span>
+                <span class="slds-form-element__label slds-p-around_x-small">
+                    Yes, I would like to receive marketing communications regarding Salesforce products, services, and events. I can unsubscribe at a later time.</span>
+            </label>
+        </div>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Building</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Buildings</value>
+    </caseValues>
+    <fields>
+        <help><!-- This field stores the area occupied by the building. --></help>
+        <label><!-- Area(sq.ft) --></label>
+        <name>Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Code --></label>
+        <name>Building_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field holds the description about the building. --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Gym --></label>
+        <name>Has_Gym__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Swimming Pool --></label>
+        <name>Has_Swimming_Pool__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum Number of Flats --></label>
+        <name>Maximum_Number_of_Flats__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculates No. of flats that are currently present in the building --></help>
+        <label><!-- Number Of Flats --></label>
+        <name>Number_Of_Flats__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field stores the number of floors in the building. --></help>
+        <label><!-- Number Of Floors --></label>
+        <name>Number_Of_Floors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pincode --></label>
+        <name>Pincode__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <layouts>
+        <layout>Building Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Building Code must be in alphabets and uppercase only --></errorMessage>
+        <name>Building_Code_in_upper_case</name>
+    </validationRules>
+</CustomObjectTranslation>

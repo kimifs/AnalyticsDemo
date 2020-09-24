@@ -1,0 +1,7 @@
+<design:component>
+
+    <design:attribute name="show_icon" label="Display Icon" />
+    <design:attribute name="icon_name" label="Resource Name" />
+    <design:attribute name="cmp_title" label="Title" />
+    
+</design:component>

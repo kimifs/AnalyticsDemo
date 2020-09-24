@@ -1,0 +1,10 @@
+.THIS {
+    background-color: #1C3259;
+    color: #FFFFFF;
+    border-radius: 0 0 0 0;
+    border: none;
+}
+
+.THIS .hide {
+    display: none;
+}
